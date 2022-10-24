@@ -73,6 +73,7 @@ public class OrderService {
 
             if (allProductsInStock) {
                 orderRepository.save(order);
+                log.info("Successfully created the orderNumber {}"+ order.getOrderNumber());
                 return "Order Placed Successfully";
             } else {
                 throw new IllegalArgumentException("Product is not in stock, please try again later");
