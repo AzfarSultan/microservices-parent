@@ -15,13 +15,12 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-
+        <module>product-service</module>
         <module>order-service</module>
         <module>inventory-service</module>
         <module>discovery-server</module>
         <module>api-gateway</module>
         <module>notification-service</module>
-        <module>product-service</module>
     </modules>
 
     <properties>
@@ -76,7 +75,9 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-
+                <from>
+                    <image>eclipse-temurin:17.0.4.1_1-jre</image>
+                </from>
                     <to>
                         <image>registry.hub.docker.com/azsutlan/${project.artifactId}</image>
                     </to>
